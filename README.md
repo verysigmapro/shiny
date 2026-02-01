@@ -31,14 +31,14 @@ getgenv().decompile = function(script_instance)
   local encoded = crypt.base64encode(bytecode)
   return request(
     {
-      Url = "http://10.0.2.2:3000/luau/decompile",
+      Url = "",
       Method = "POST",
       Body = encoded
     }
   ).Body
 end
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/luau/SynSaveInstance/main/saveinstance.luau"))()({
+loadstring(game:HttpGet("https://raw.githubusercontent.com/verysigmapro/UniversalSynSaveInstance-With-Save-Terrain/refs/heads/main/saveinstance_rewrite.luau"))()({
   mode = "scripts",
   NilInstances = true,
 })
