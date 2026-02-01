@@ -31,7 +31,7 @@ getgenv().decompile = function(script_instance)
   local encoded = crypt.base64encode(bytecode)
   return request(
     {
-      Url = "http://localhost:3000/luau/decompile",
+      Url = "http://10.0.2.2:3000/luau/decompile",
       Method = "POST",
       Body = encoded
     }
